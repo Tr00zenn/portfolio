@@ -416,6 +416,7 @@
     <ul class="nav-links" id="navLinks">
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#building">Building</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -728,11 +729,109 @@
   </div>
 </section>
 
+<!-- ─── CURRENTLY BUILDING ────────────────────────────── -->
+<section id="building" style="background:var(--bg2)">
+  <div class="container">
+    <div class="tag-row reveal">
+      <span class="section-tag">03 / Currently Building</span>
+      <div class="tag-line"></div>
+    </div>
+    <div style="margin-bottom:48px" class="reveal">
+      <h2 class="section-title">Beyond client work —<br>engineering a personal AGI system.</h2>
+      <p class="section-sub">Not a side project. A running system on a live VPS, getting smarter and cheaper every week. The goal: near-zero AI infrastructure cost with full autonomous capability.</p>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- Item 1: Self-Hosted LLM -->
+      <div class="project-card reveal">
+        <div class="project-number" style="color:var(--accent)">LAYER 01 · INFERENCE</div>
+        <h3 class="project-name">Self-Hosted LLM Stack</h3>
+        <p class="project-desc">
+          Ollama running on VPS with <code style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);background:var(--bg3);padding:2px 6px;border-radius:3px">llama3.1:8b</code> and <code style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);background:var(--bg3);padding:2px 6px;border-radius:3px">phi3:mini</code> for local inference. Replacing paid API calls with on-device models for routine tasks — summarisation, classification, structured extraction.
+        </p>
+        <div class="project-complex">
+          <div class="project-complex-label">🎯 Goal</div>
+          <div class="project-complex-text">Near-zero AI infrastructure cost. Local model handles 80% of tasks; cloud APIs only trigger when complexity demands it.</div>
+        </div>
+        <div class="project-badges">
+          <span class="badge badge-cyan">Ollama</span>
+          <span class="badge badge-purple">llama3.1:8b</span>
+          <span class="badge badge-gray">phi3:mini</span>
+          <span class="badge badge-orange">Ubuntu VPS</span>
+          <span class="badge badge-gray">REST API</span>
+        </div>
+      </div>
+
+      <!-- Item 2: Agent Orchestration -->
+      <div class="project-card reveal reveal-d1">
+        <div class="project-number" style="color:var(--accent)">LAYER 02 · ORCHESTRATION</div>
+        <h3 class="project-name">Autonomous Agent Orchestration</h3>
+        <p class="project-desc">
+          Claude Code hooks for event-driven automation — file saves, git commits, and shell triggers fire agent actions without manual input. Custom slash commands (skills) handle domain-specific tasks. FORGE delegates coding jobs to Claude Code via shell triggers.
+        </p>
+        <div class="project-complex">
+          <div class="project-complex-label">🎯 Goal</div>
+          <div class="project-complex-text">Agents that act on events, not on prompts. The system does work in the background while I'm focused elsewhere.</div>
+        </div>
+        <div class="project-badges">
+          <span class="badge badge-cyan">Claude Code Hooks</span>
+          <span class="badge badge-purple">Custom Skills / Slash Cmds</span>
+          <span class="badge badge-green">Shell Triggers</span>
+          <span class="badge badge-gray">FORGE Agent</span>
+          <span class="badge badge-orange">Event-Driven</span>
+        </div>
+      </div>
+
+      <!-- Item 3: Workflow Engine -->
+      <div class="project-card reveal reveal-d2">
+        <div class="project-number" style="color:var(--accent)">LAYER 03 · ROUTING</div>
+        <h3 class="project-name">Intelligent Workflow Engine</h3>
+        <p class="project-desc">
+          n8n paired with a LiteLLM gateway that routes tasks to the cheapest capable model. Approval flows, scheduled jobs, and webhook pipelines all route through the same cost-aware layer.
+        </p>
+        <div class="project-complex">
+          <div class="project-complex-label">🎯 Routing Logic</div>
+          <div class="project-complex-text">Auto-fallback chain: local Ollama → Gemini free tier → Claude API. Cloud spend only triggers when local inference isn't good enough.</div>
+        </div>
+        <div class="project-badges">
+          <span class="badge badge-purple">n8n</span>
+          <span class="badge badge-cyan">LiteLLM Gateway</span>
+          <span class="badge badge-green">Model Routing</span>
+          <span class="badge badge-orange">Approval Flows</span>
+          <span class="badge badge-gray">Webhook Pipelines</span>
+        </div>
+      </div>
+
+      <!-- Item 4: Vector Memory -->
+      <div class="project-card reveal reveal-d3">
+        <div class="project-number" style="color:var(--accent)">LAYER 04 · MEMORY</div>
+        <h3 class="project-name">Vector Memory Layer</h3>
+        <p class="project-desc">
+          Chroma DB for persistent agent memory with <code style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);background:var(--bg3);padding:2px 6px;border-radius:3px">nomic-embed</code> for semantic search across past decisions, conversations, and outputs. Agents recall context without re-reading entire histories.
+        </p>
+        <div class="project-complex">
+          <div class="project-complex-label">🎯 Goal</div>
+          <div class="project-complex-text">Agents that remember. Every decision, output, and correction gets embedded — so the system gets smarter with every run, not just every prompt.</div>
+        </div>
+        <div class="project-badges">
+          <span class="badge badge-cyan">Chroma DB</span>
+          <span class="badge badge-purple">nomic-embed</span>
+          <span class="badge badge-green">Semantic Search</span>
+          <span class="badge badge-orange">Vector Embeddings</span>
+          <span class="badge badge-gray">Persistent Memory</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- ─── SKILLS ─────────────────────────────────────────── -->
 <section id="skills">
   <div class="container">
     <div class="tag-row reveal">
-      <span class="section-tag">03 / Skills</span>
+      <span class="section-tag">04 / Skills</span>
       <div class="tag-line"></div>
     </div>
     <div style="margin-bottom:48px" class="reveal">
@@ -869,7 +968,7 @@
 <section id="experience">
   <div class="container">
     <div class="tag-row reveal">
-      <span class="section-tag">04 / Experience</span>
+      <span class="section-tag">05 / Experience</span>
       <div class="tag-line"></div>
     </div>
     <div style="margin-bottom:56px" class="reveal">
@@ -945,7 +1044,7 @@
 <section id="contact">
   <div class="container">
     <div class="tag-row reveal">
-      <span class="section-tag">05 / Contact</span>
+      <span class="section-tag">06 / Contact</span>
       <div class="tag-line"></div>
     </div>
     <div class="contact-inner">
